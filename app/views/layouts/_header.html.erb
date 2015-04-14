@@ -37,15 +37,18 @@
         <button type="submit" class="btn btn-default">Хайх</button>
       </form>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Тухай</a>
-
-</li>
-<li><a href="#">Нэвтрэх</a>
-
-</li>
-<li><a href="#">Бүртгүүлэх</a>
-
-</li>
+        
+        <% if current_user %>
+        <li><%= link_to "Тохиргоо", edit_user_registration_path %></li>
+        <li><%= link_to "Гарах", destroy_user_session_path, method: :delete %></li>
+        <%else %>
+        <li><a href="#">Тухай</a></li>
+        <li><%=link_to "Нэвтрэх", new_user_session_path %></li>
+        <li><%=link_to "Бүртгүүлэх", new_user_registration_path %></li>
+        <%end%>
+        
+        
+        
         <li class="dropdown">
           
           <ul class="dropdown-menu" role="menu">
