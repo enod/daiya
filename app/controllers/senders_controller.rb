@@ -1,4 +1,5 @@
 class SendersController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :edit, :create, :update, :destroy]
   before_action :set_sender, only: [:show, :edit, :update, :destroy]
 
   # GET /senders
@@ -24,7 +25,7 @@ class SendersController < ApplicationController
   # POST /senders
   # POST /senders.json
   def create
-    @sender = Sender.new(sender_params)
+    @sender = current_user.senders.new(sender_params)
 
     respond_to do |format|
       if @sender.save
@@ -69,6 +70,6 @@ class SendersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def sender_params
-      params.require(:sender).permit(:source_address, :destination_address, :description, :arrival, :phone, :mail, :fee, :user_id)
+      params.require(:sender).permit(:source_address, :destination_address, :description, :arrival, :phone, :mail, :fee)
     end
 end
