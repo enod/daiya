@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  source_address: MyString
+  destination_address: MyString
+  description: MyText
+  arrival: 2015-04-15
+  phone: MyString
+  mail: MyString
+  fee: MyString
+  user_id: 1
+
+two:
+  source_address: MyString
+  destination_address: MyString
+  description: MyText
+  arrival: 2015-04-15
+  phone: MyString
+  mail: MyString
+  fee: MyString
+  user_id: 1

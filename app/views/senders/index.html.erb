@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Senders</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Source address</th>
+      <th>Destination address</th>
+      <th>Arrival</th>
+      <th>Fee</th>
+      
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @senders.each do |sender| %>
+      <tr>
+        <td><%= sender.source_address %></td>
+        <td><%= sender.destination_address %></td>
+        <td><%= sender.arrival %></td>
+        <td><%= sender.fee %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<% if current_user %>
+<%= link_to 'New Sender', new_sender_path %>
+<% end %>
