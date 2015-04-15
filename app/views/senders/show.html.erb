@@ -1,50 +1,39 @@
-<p id="notice"><%= notice %></p>
-
+<div class="row">
+<div class="col-md-3">
 <p>
-  <strong>Source address:</strong>
-  <%= @sender.source_address %>
-</p>
-
+<strong>Хаанаас: </strong>
+<%= @sender.source_address %></p>
 <p>
-  <strong>Destination address:</strong>
-  <%= @sender.destination_address %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @sender.description %>
-</p>
-
-<p>
-  <strong>Arrival:</strong>
-  <%= @sender.arrival %>
-</p>
-
-<p>
-  <strong>Phone:</strong>
-  <%= @sender.phone %>
-</p>
-
-<p>
-  <strong>Mail:</strong>
-  <%= @sender.mail %>
-</p>
-
-<p>
-  <strong>Fee:</strong>
-  <%= @sender.fee %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @sender.user_id %>
-</p>
-
 <div id="map-canvas" style="width:230px; height:230px;"></div>
+<strong>Хаашаа: </strong>
+<%= @sender.destination_address %></p>
+<p>
 <div id="map-canvas2" style="width:230px; height:230px;"></div>
+<strong>Дэлгэрэнгүй: </strong>
+<%= @sender.description %></p>
+<p>
+<strong>Очих өдөр: </strong>
+<%= @sender.arrival %></p>
+<p>
+<strong>Утас: </strong>
+<%= @sender.phone %></p>
+<p><strong>Майл: </strong>
+<%= @sender.mail %></p>
+<p><strong>Хүсч буй хөлс:</strong>
+<%= @sender.fee %></p>
 
-<%= link_to 'Edit', edit_sender_path(@sender) %> |
-<%= link_to 'Back', senders_path %>
+</div>
+
+<div class="col-md-9">
+
+<h3> Дайлга дайх саналууд </h3>
+
+</div>
+
+</div>
+
+
+
 
  <script type="text/javascript">
       function initialize() {
