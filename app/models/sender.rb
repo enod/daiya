@@ -17,5 +17,7 @@ class Sender < ActiveRecord::Base
 	end
 
 	after_validation :geocode  
+
+	has_many :negotiations, dependent: :destroy
 	
 end

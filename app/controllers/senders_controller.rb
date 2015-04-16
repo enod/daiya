@@ -11,6 +11,8 @@ class SendersController < ApplicationController
   # GET /senders/1
   # GET /senders/1.json
   def show
+    @negotiations = @sender.negotiations
+    @negotiation = Negotiation.new
   end
 
   # GET /senders/new

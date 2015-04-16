@@ -5,5 +5,6 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   validates_presence_of :name
-  has_many :senders
+  has_many :senders, dependent: :destroy
+  has_many :negotiations, dependent: :destroy
 end
