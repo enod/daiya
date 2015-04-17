@@ -59,7 +59,11 @@ class SendersController < ApplicationController
   # DELETE /senders/1
   # DELETE /senders/1.json
   def destroy
+    # ene lineiig nemev!
+    @sender = Sender.find(params[:id])
+    #
     @sender.destroy
+
     respond_to do |format|
       format.html { redirect_to senders_url, notice: 'Sender was successfully destroyed.' }
       format.json { head :no_content }

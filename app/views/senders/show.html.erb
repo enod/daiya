@@ -1,14 +1,36 @@
+<script type="text/javascript">
+      function initialize() {
+        
+        var dest = {lat: <%= @sender.update_coordinates[2] %>, lng: <%= @sender.update_coordinates[3] %>};
+        
+        var mapOptions2 = {
+          center: dest,
+          zoom: 8
+        };
+        
+        
+        var map2 = new google.maps.Map(document.getElementById('map-canvas2'), mapOptions2);
+        
+        
+        var marker2 = new google.maps.Marker({
+          position:dest,
+          map: map2
+        });
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+
 <div class="row">
 <div class="col-md-3">
 <p>
 <strong>Хаанаас: </strong>
 <%= @sender.source_address %></p>
 <p>
-<!--<div id="map-canvas" style="width:230px; height:230px;"></div></comment>-->
+
 <strong>Хаашаа: </strong>
 <%= @sender.destination_address %></p>
 <p>
-<!--<div id="map-canvas2" style="width:230px; height:230px;"></div>-->
+<div id="map-canvas2" style="width:230px; height:230px;"></div>
 <strong>Дэлгэрэнгүй: </strong>
 <%= @sender.description %></p>
 <p>
@@ -22,13 +44,19 @@
 <p><strong>Хүсч буй хөлс:</strong>
 <%= @sender.fee %></p>
 
+
+<%= link_to 'Устгах', sender_path(@sender), :confirm => 'Are you sure?', :method => :delete %> |
+<%= link_to 'Буцах', senders_path %>
+
+
+
 </div>
 
 <div class="col-md-9">
 
-<h3> Нинжа хөлслөх саналууд </h3>
+<h3> Хүргүүлэх саналууд</h3>
 <% if current_user %>
-<h5>New Negotiation</h5>
+<h5>Хүргүүлэх санал оруулах</h5>
 <%= render "negotiations/form" %>
 <h5>All Negotiations</h5>
 <%= render @negotiations %>
@@ -38,60 +66,7 @@
 </div>
 
 
+<div id="map-canvas2"></div>
 
 
- <script type="text/javascript">
-      function initialize() {
-        var source = {lat: <%= @sender.update_coordinates[0] %>, lng: <%= @sender.update_coordinates[1] %>};
-        var dest = {lat: <%= @sender.update_coordinates[2] %>, lng: <%= @sender.update_coordinates[3] %>};
-        var mapOptions = {
-          center: source,
-          zoom: 8
-        };
-        var mapOptions2 = {
-          center: dest,
-          zoom: 8
-        };
-        
-        var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-        var map2 = new google.maps.Map(document.getElementById('map-canvas2'), mapOptions2);
-        
-        var marker = new google.maps.Marker({
-          position:source,
-          map: map
-        });
-        var marker2 = new google.maps.Marker({
-          position:dest,
-          map: map2
-        });
-      }
-      google.maps.event.addDomListener(window, 'load', initialize);
-    </script>
-
-<script type="text/javascript">
-      function initialize() {
-        var source = {lat: <%= @sender.update_coordinates[0] %>, lng: <%= @sender.update_coordinates[1] %>};
-        var dest = {lat: <%= @sender.update_coordinates[2] %>, lng: <%= @sender.update_coordinates[3] %>};
-        var mapOptions = {
-          center: source,
-          zoom: 8
-        };
-        var mapOptions2 = {
-          center: dest,
-          zoom: 8
-        };
-        
-        var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-        var map2 = new google.maps.Map(document.getElementById('map-canvas2'), mapOptions2);
-        
-        var marker = new google.maps.Marker({
-          position:source,
-          map: map
-        });
-        var marker2 = new google.maps.Marker({
-          position:dest,
-          map: map2
-        });
-      }
-      google.maps.event.addDomListener(window, 'load', initialize);
-    </script>
+ 

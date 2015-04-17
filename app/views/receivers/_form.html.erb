@@ -1,0 +1,20 @@
+<%= simple_form_for(@receiver) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :stuff, required: true %>
+    <%= f.input :description %>
+    <%= f.input :source_address, required: true %>
+    <%= f.input :destination_address, required: true %>
+    <%= f.input :from, required: true %>
+    <%= f.input :to, required: true %>
+    <%= f.input :phone %>
+    <%= f.input :mail %>
+    <%= f.input :fee %>
+    
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

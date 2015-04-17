@@ -1,0 +1,32 @@
+<h1>Listing Receivers</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Stuff</th>
+      <th>Source address</th>
+      <th>Destination address</th>
+      <th>From</th>
+      <th>To</th>
+      
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @receivers.each do |receiver| %>
+      <tr>
+        <td><%= receiver.stuff %></td>
+        <td><%= receiver.source_address %></td>
+        <td><%= receiver.destination_address %></td>
+        <td><%= receiver.from %></td>
+        <td><%= receiver.to %></td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<% if current_user %>
+<%= link_to 'New Receiver', new_receiver_path %>
+<% end %>

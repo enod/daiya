@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Stuff:</strong>
+  <%= @reciever.stuff %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @reciever.description %>
+</p>
+
+<p>
+  <strong>Source address:</strong>
+  <%= @reciever.source_address %>
+</p>
+
+<p>
+  <strong>Destination address:</strong>
+  <%= @reciever.destination_address %>
+</p>
+
+<p>
+  <strong>From:</strong>
+  <%= @reciever.from %>
+</p>
+
+<p>
+  <strong>To:</strong>
+  <%= @reciever.to %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @reciever.phone %>
+</p>
+
+<p>
+  <strong>Mail:</strong>
+  <%= @reciever.mail %>
+</p>
+
+<p>
+  <strong>Fee:</strong>
+  <%= @reciever.fee %>
+</p>
+
+<%= link_to 'Edit', edit_reciever_path(@reciever) %> |
+<%= link_to 'Back', recievers_path %>

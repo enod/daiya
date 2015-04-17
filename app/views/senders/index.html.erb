@@ -1,10 +1,9 @@
-<p id="notice"><%= notice %></p>
-
 <h1>Listing Senders</h1>
 
 <table class="table">
   <thead>
     <tr>
+      <th>Name</th>
       <th>Source address</th>
       <th>Destination address</th>
       <th>Arrival</th>
@@ -17,6 +16,7 @@
   <tbody>
     <% @senders.each do |sender| %>
       <tr>
+        <td><%= sender.user.name %></td>
         <td><%= sender.source_address %></td>
         <td><%= sender.destination_address %></td>
         <td><%= sender.arrival %></td>

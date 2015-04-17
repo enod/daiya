@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150416085145) do
+ActiveRecord::Schema.define(version: 20150417171716) do
 
   create_table "negotiations", force: :cascade do |t|
     t.integer  "sender_id"
@@ -21,12 +21,31 @@ ActiveRecord::Schema.define(version: 20150416085145) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "negotioations", force: :cascade do |t|
-    t.integer  "place_id"
+  create_table "receivers", force: :cascade do |t|
+    t.string   "stuff"
+    t.text     "description"
+    t.string   "source_address"
+    t.string   "destination_address"
+    t.date     "from"
+    t.date     "to"
+    t.string   "phone"
+    t.string   "mail"
+    t.string   "fee"
+    t.integer  "user_id"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.float    "latitude1"
+    t.float    "longitude1"
+    t.float    "latitude2"
+    t.float    "longitude2"
+  end
+
+  create_table "requests", force: :cascade do |t|
+    t.integer  "receiver_id"
     t.integer  "user_id"
     t.text     "content"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "senders", force: :cascade do |t|
