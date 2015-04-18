@@ -2,7 +2,10 @@
   <div class="col-md-3">
     <p><strong>Юу: </strong>
     <%= @receiver.stuff %></p>
+    <p><strong>Зураг: </strong>
+    <%= image_tag @receiver.image.url(:original), class: "img-responsive" %></p>
     <p>
+
       <strong>Description:</strong>
       <%= @receiver.description %>
     </p>

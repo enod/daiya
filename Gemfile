@@ -58,7 +58,10 @@ group :development, :test do
 
   gem 'paperclip'
 
-  gem 'dotenv-rails', groups: :development
+  gem 'dotenv-rails', groups: [:development]
+
+  gem 'aws-sdk'
+
 
 end
 

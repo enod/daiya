@@ -7,7 +7,16 @@ class Receiver < ActiveRecord::Base
 	validates_presence_of :user_id
 	belongs_to :user
 	has_attached_file :image
-	has_attached_file :resource
+
+	validates_attachment_content_type :image, 
+	content_type:  /^image\/(png|gif|jpeg)/,
+	message: "Зөвхөн зураг оруулах ёстой!"
+
+	
+
+	validates :image, attachment_presence: true
+	
+
 
 	geocoded_by :source_address, :latitude => :latitude1, :longitude => :longitude1
 	geocoded_by :destination_address, :latitude => :latitude2, :longitude => :longitude2
