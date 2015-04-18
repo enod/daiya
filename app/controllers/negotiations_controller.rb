@@ -30,7 +30,9 @@ class NegotiationsController < ApplicationController
 	end
 
 	def destroy
+		
 		@negotiation.destroy
+		@negotiation = Negotiation.find(params[:id])
 		respond_to do |format|
 			format.html { redirect_to sender_path(@negotiation.sender), notice: 'Sender was successfully destroyed.' }
 		end

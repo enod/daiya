@@ -1,14 +1,14 @@
-<h1>Listing Receivers</h1>
+<h1>Хүлээн авагчдын жагсаалт</h1>
 
 <table class="table">
   <thead>
     <tr>
-      <th>Stuff</th>
-      <th>Source address</th>
-      <th>Destination address</th>
-      <th>From</th>
-      <th>To</th>
-      
+      <th>Юуг: </th>
+      <th>Хаанаас: </th>
+      <th>Хаашаа: </th>
+      <th>Хэднээс:</th>
+      <th>Хэднийд:</th>
+      <th></th>
     </tr>
   </thead>
 
@@ -21,6 +21,15 @@
         <td><%= receiver.from %></td>
         <td><%= receiver.to %></td>
         
+        <td><ul class="list-group">
+          <li class="list-group-item">
+            <span class="badge">1</span>
+            <%= link_to 'Дэлгэрэнгүй', receiver_path(receiver.id) %>
+          </li>
+        
+        </ul></td>
+        
+        
       </tr>
     <% end %>
   </tbody>
@@ -28,5 +37,5 @@
 
 <br>
 <% if current_user %>
-<%= link_to 'New Receiver', new_receiver_path %>
+<%= link_to 'Хүсэлт гаргах', new_receiver_path %>
 <% end %>

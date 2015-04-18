@@ -1,14 +1,14 @@
-<h1>Listing Senders</h1>
+<h1>Хүргэгчдийн жагсаалт</h1>
 
 <table class="table">
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Source address</th>
-      <th>Destination address</th>
-      <th>Arrival</th>
-      <th>Fee</th>
-      <th>Details</th>
+      <th>Нэр</th>
+      <th>Хаанаас</th>
+      <th>Хаашаа</th>
+      <th>Ирэх өдөр</th>
+      <th>Хүсэж буй хөлс</th>
+      <th></th>
       
     </tr>
   </thead>
@@ -32,5 +32,5 @@
 
 <br>
 <% if current_user %>
-<%= link_to 'New Sender', new_sender_path %>
+<%= link_to 'Хүргэгч болох', new_sender_path %>
 <% end %>

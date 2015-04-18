@@ -41,6 +41,11 @@
       <%= @receiver.fee %>
     </p>
 
+<i class="fa fa-trash-o"> <%= link_to 'устгах', receiver_path(@receiver), :confirm => 'Are you sure?', :method => :delete %> </a></i> |
+<i class="fa fa-pencil"> <%= link_to 'засах', edit_receiver_path(@receiver) %></a></i> |
+<i class="fa fa-arrow-left"> <%= link_to 'буцах', receivers_path %></a></i>  
+
+
   </div>
 
   <div class="col-md-9">
@@ -60,8 +65,8 @@
 <div id="map-canvas1" style="width: 230px; height:230px;" > </div>
 
 
-<%= link_to 'Edit', edit_receiver_path(@receiver) %> |
-<%= link_to 'Back', receivers_path %>
+ 
+
 
 <script type="text/javascript">
       function initialize() {

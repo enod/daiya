@@ -1,2 +1,4 @@
-<p><%= gravatar_tag negotiation.user.email, size: 20 %> <%= negotiation.user.name %>: <%= negotiation.content %> </p>
+<p><%= gravatar_tag negotiation.user.email, size: 20 %> <%= negotiation.user.name %>: <%= negotiation.content %>  <%= link_to 'x', negotiations_path(@negotiation), :confirm => 'Are you sure?', :method => :delete %> </p>
+
+
 

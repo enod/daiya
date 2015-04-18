@@ -1,0 +1,45 @@
+<div class="row">
+<h1 class="text-center">Удирдах самбар</h1>
+
+<div class="col-md-6">
+<h4 class="text-center">
+Миний хүргэлтүүд <%= link_to "Хүргэлт нэмэх", new_sender_path, class: "btn btn-info btn-sm" %>
+</h4>
+
+<table class="table table-condensed">
+      <thead>
+        <tr>
+          <th>Хаанаас</th>
+          <th>Хаашаа</th>
+          <th>Ирэх өдөр</th>
+          <th>Хөлс</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+      	<% @senders.each do |sender| %>
+
+
+        <tr>
+          <td><%= sender.source_address %></td>
+          <td><%= sender.destination_address %></td>
+          <td><%= sender.arrival %></td>
+          <td><%= sender.fee %></td>
+          <td><%= link_to "харах", sender_path(sender) %> <%= link_to "засах", edit_sender_path(sender) %> <%= link_to 'устгах', sender_path(sender), :confirm => 'Are you sure?', :method => :delete %></td>
+          
+
+        </tr>
+        <% end %>
+
+      </tbody>
+    </table>
+
+</div>
+
+<div class="col-md-6">
+<h4 class="text-center">
+Миний хүргүүлэх хүсэлтүүд
+</h4>
+</div>
+
+</div>

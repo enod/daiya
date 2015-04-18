@@ -46,7 +46,9 @@
 
 
 <%= link_to 'Устгах', sender_path(@sender), :confirm => 'Are you sure?', :method => :delete %> |
+<%= link_to 'Засах', edit_sender_path(@sender) %> | 
 <%= link_to 'Буцах', senders_path %>
+
 
 
 
@@ -54,11 +56,11 @@
 
 <div class="col-md-9">
 
-<h3> Хүргүүлэх саналууд</h3>
+<h3> Тохиролцох талбар</h3>
 <% if current_user %>
-<h5>Хүргүүлэх санал оруулах</h5>
+<h5>Санал оруулах</h5>
 <%= render "negotiations/form" %>
-<h5>All Negotiations</h5>
+<h5>Бүх санал</h5>
 <%= render @negotiations %>
 <% end %>
 </div>
