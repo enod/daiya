@@ -11,15 +11,16 @@
       <a class="list-group-item" href="#"><i class="fa fa-phone fa-fw"></i>&nbsp; Утас: <%= @receiver.phone %> </a>
       <a class="list-group-item" href="#"><i class="fa fa-envelope-o fa-fw"></i>&nbsp; Майл: <%= @receiver.mail %> </a>
       <a class="list-group-item" href="#"><i class="fa fa-usd fa-fw"></i>&nbsp; Олгох хөлс: <%= @receiver.fee %> </a>
-      <% if current_user %>
-      <i class="fa fa-arrow-left"> <%= link_to 'Буцах', receiver_path %></i> | 
-      <i class="fa fa-pencil"> <%= link_to 'Засах', edit_receiver_path(@receiver) %></i> |
-      <i class="fa fa-trash-o"> <%= link_to 'Устгах', receiver_path(@receiver), :confirm => 'Are you sure?', :method => :delete %></i> 
-      <% end %></a>
+      
     </div>
   </div>  
 
-
+<!-- 
+<% if current_user %>
+      <i class="fa fa-arrow-left"> <%= link_to 'Буцах', receiver_path %></i> | 
+      <i class="fa fa-pencil"> <%= link_to 'Засах', edit_receiver_path(@receiver) %></i> |
+      <i class="fa fa-trash-o"> <%= link_to 'Устгах', receiver_path(@receiver), :confirm => 'Are you sure?', :method => :delete %></i> 
+      <% end %></a> -->
 
 <div class="col-md-9">
 
