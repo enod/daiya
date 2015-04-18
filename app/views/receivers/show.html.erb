@@ -15,12 +15,7 @@
     </div>
   </div>  
 
-<!-- 
-<% if current_user %>
-      <i class="fa fa-arrow-left"> <%= link_to 'Буцах', receiver_path %></i> | 
-      <i class="fa fa-pencil"> <%= link_to 'Засах', edit_receiver_path(@receiver) %></i> |
-      <i class="fa fa-trash-o"> <%= link_to 'Устгах', receiver_path(@receiver), :confirm => 'Are you sure?', :method => :delete %></i> 
-      <% end %></a> -->
+
 
 <div class="col-md-9">
 
@@ -30,6 +25,8 @@
   <%= render "requests/form" %>
   <h5>Бүх санал:</h5>
   <%= render @requests %>
+  <% else %>
+  <p>Please Login First</p>
   <% end %>
 </div>
 
