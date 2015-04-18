@@ -44,11 +44,13 @@
 <p><strong>Хүсч буй хөлс:</strong>
 <%= @sender.fee %></p>
 
+<% if current_user %>
+<i class="fa fa-arrow-left"> <%= link_to 'Буцах', senders_path %></a></i> | 
+<i class="fa fa-pencil"> <%= link_to 'Засах', edit_sender_path(@sender) %></a></i> |
+<i class="fa fa-trash-o"> <%= link_to 'Устгах', sender_path(@sender), :confirm => 'Are you sure?', :method => :delete %> </a></i> |
 
-<%= link_to 'Устгах', sender_path(@sender), :confirm => 'Are you sure?', :method => :delete %> |
-<%= link_to 'Засах', edit_sender_path(@sender) %> | 
-<%= link_to 'Буцах', senders_path %>
 
+<% end %>
 
 
 

@@ -6,6 +6,7 @@ class PagesController < ApplicationController
 
   def dashboard
   	@senders = current_user.senders
+  	@receivers = current_user.receivers
   end
 
 end

@@ -24,6 +24,7 @@ class SendersController < ApplicationController
 
   # GET /senders/1/edit
   def edit
+    authorize! :manage, @sender
   end
 
   # POST /senders
@@ -45,6 +46,7 @@ class SendersController < ApplicationController
   # PATCH/PUT /senders/1
   # PATCH/PUT /senders/1.json
   def update
+    authorize! :manage, @sender
     respond_to do |format|
       if @sender.update(sender_params)
         format.html { redirect_to @sender, notice: 'Sender was successfully updated.' }
@@ -59,6 +61,7 @@ class SendersController < ApplicationController
   # DELETE /senders/1
   # DELETE /senders/1.json
   def destroy
+    authorize! :manage, @sender
     # ene lineiig nemev!
     @sender = Sender.find(params[:id])
     #

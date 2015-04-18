@@ -2,5 +2,6 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @receiver %> |
-<%= link_to 'Back', receivers_path %>
+<%= link_to 'Буцах', receivers_path %> | 
+<%= link_to 'Үзэх', @receiver %> | 
+<%= link_to 'Устгах', receiver_path(@receiver), :confirm => 'Are you sure?', :method => :delete %> 

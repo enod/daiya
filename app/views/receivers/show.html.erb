@@ -41,9 +41,11 @@
       <%= @receiver.fee %>
     </p>
 
-<i class="fa fa-trash-o"> <%= link_to 'устгах', receiver_path(@receiver), :confirm => 'Are you sure?', :method => :delete %> </a></i> |
-<i class="fa fa-pencil"> <%= link_to 'засах', edit_receiver_path(@receiver) %></a></i> |
-<i class="fa fa-arrow-left"> <%= link_to 'буцах', receivers_path %></a></i>  
+<i class="fa fa-arrow-left"> <%= link_to 'Буцах', receivers_path %></a></i> | 
+<i class="fa fa-pencil"> <%= link_to 'Засах', edit_receiver_path(@receiver) %></a></i> |
+<i class="fa fa-trash-o"> <%= link_to 'Устгах', receiver_path(@receiver), :confirm => 'Are you sure?', :method => :delete %> </a></i> |
+
+
 
 
   </div>
