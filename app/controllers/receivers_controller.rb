@@ -72,6 +72,6 @@ class ReceiversController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def receiver_params
-      params.require(:receiver).permit(:stuff, :description, :source_address, :destination_address, :from, :to, :phone, :mail, :fee)
+      params.require(:receiver).permit(:stuff, :description, :source_address, :destination_address, :from, :to, :phone, :mail, :fee, :image, :resource)
     end
 end

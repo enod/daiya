@@ -55,5 +55,8 @@ group :development, :test do
   gem 'geocoder'
 
   gem "cancan"
+
+  gem 'paperclip'
+
 end
 

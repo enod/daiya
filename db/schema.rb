@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150417171716) do
+ActiveRecord::Schema.define(version: 20150418075635) do
 
   create_table "negotiations", force: :cascade do |t|
     t.integer  "sender_id"
@@ -32,12 +32,20 @@ ActiveRecord::Schema.define(version: 20150417171716) do
     t.string   "mail"
     t.string   "fee"
     t.integer  "user_id"
-    t.datetime "created_at",          null: false
-    t.datetime "updated_at",          null: false
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
     t.float    "latitude1"
     t.float    "longitude1"
     t.float    "latitude2"
     t.float    "longitude2"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.string   "resource_file_name"
+    t.string   "resource_content_type"
+    t.integer  "resource_file_size"
+    t.datetime "resource_updated_at"
   end
 
   create_table "requests", force: :cascade do |t|
