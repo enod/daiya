@@ -62,6 +62,8 @@ group :development, :test do
 
   gem 'aws-sdk'
 
+  gem 'friendly_id'
+
 
 end
 

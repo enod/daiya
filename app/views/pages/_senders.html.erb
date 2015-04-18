@@ -4,6 +4,7 @@
           <th>Хаанаас</th>
           <th>Хаашаа</th>
           <th>Ирэх өдөр</th>
+          
           <th></th>
         </tr>
       </thead>
@@ -13,7 +14,9 @@
           <td><%= sender.source_address %></td>
           <td><%= sender.destination_address %></td>
           <td><%= sender.arrival %></td>
-          <td><%= link_to 'засах', edit_sender_path(sender) %></td>
+          <td><%= link_to 'засах', edit_sender_path(sender) %> | 
+          <%= link_to 'үзэх', @sender %></td>
+          
           
           
 

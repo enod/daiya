@@ -3,11 +3,11 @@
 <table class="table">
   <thead>
     <tr>
-      <th>Юуг: </th>
-      <th>Хаанаас: </th>
-      <th>Хаашаа: </th>
-      <th>Хэднээс:</th>
-      <th>Хэднийд:</th>
+      <th>Юуг </th>
+      <th>Хаанаас </th>
+      <th>Хаашаа </th>
+      <th>Хэднээс</th>
+      <th>Хэднийд</th>
       <th></th>
     </tr>
   </thead>
@@ -22,9 +22,9 @@
         <td><%= receiver.to %></td>
         
         <td><ul class="list-group">
-          <li class="list-group-item">
-            <span class="badge">1</span>
-            <%= link_to 'Дэлгэрэнгүй', receiver_path(receiver.id) %>
+          
+            
+            <%= link_to 'Дэлгэрэнгүй  ', receiver_path(receiver.id) %><span class="badge">1</span>
           </li>
         
         </ul></td>
@@ -37,5 +37,6 @@
 
 <br>
 <% if current_user %>
-<%= link_to 'Хүсэлт гаргах', new_receiver_path %>
+<i class="fa fa-plus fa-lg"><%= link_to 'оруулах', new_receiver_path %></i>
 <% end %>
+

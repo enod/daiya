@@ -1,4 +1,6 @@
 class Receiver < ActiveRecord::Base
+	extend FriendlyId
+	friendly_id :stuff, use: :slugged
 	validates_presence_of :stuff
 	validates_presence_of :source_address
 	validates_presence_of :destination_address
@@ -11,9 +13,6 @@ class Receiver < ActiveRecord::Base
 	validates_attachment_content_type :image, 
 	content_type:  /^image\/(png|gif|jpeg)/,
 	message: "Зөвхөн зураг оруулах ёстой!"
-
-	
-
 	validates :image, attachment_presence: true
 	
 

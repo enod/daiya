@@ -5,6 +5,7 @@
           <th>Хаанаас</th>
           <th>Хаашаа</th>
           <th></th>
+          
         </tr>
       </thead>
       <tbody>
@@ -13,7 +14,8 @@
           <td><%= receiver.stuff %></td>
           <td><%= receiver.source_address %></td>
           <td><%= receiver.destination_address %></td>
-          <td><%= link_to 'засах', edit_receiver_path(receiver) %></td>
+          <td><%= link_to 'засах', edit_receiver_path(receiver) %> |
+          <%= link_to 'үзэх', @receiver %></td>
           
         </tr>
         <% end %>
