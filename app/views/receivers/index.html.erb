@@ -3,6 +3,7 @@
 <table class="table">
   <thead>
     <tr>
+      <th>Хэн </th>
       <th>Юуг </th>
       <th>Хаанаас </th>
       <th>Хаашаа </th>
@@ -15,6 +16,7 @@
   <tbody>
     <% @receivers.each do |receiver| %>
       <tr>
+        <td><%= gravatar_tag current_user.email, size: 30 %> <%= receiver.user.name %> </td>
         <td><%= receiver.stuff %></td>
         <td><%= receiver.source_address %></td>
         <td><%= receiver.destination_address %></td>

@@ -16,14 +16,13 @@
   <tbody>
     <% @senders.each do |sender| %>
       <tr>
-        <td><%= sender.user.name %></td>
+        <td><%= gravatar_tag current_user.email, size: 30 %> <%= sender.user.name %> </td>
         <td><%= sender.source_address %></td>
         <td><%= sender.destination_address %></td>
         <td><%= sender.arrival %></td>
         <td><%= sender.fee %></td>
         <td>
           <%= link_to 'Дэлгэрэнгүй', sender_path(sender.id), :method => :get %> <span class="badge"><%= sender.negotiations.count %></span></td>
-          
           
       </tr>
     <% end %>
