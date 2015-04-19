@@ -2,7 +2,7 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.input :content, required: true %>
+    <%= f.input :content, required: true, label:false %>
     <%= f.hidden_field :receiver_id, required: true, value: @receiver.id %>
     
   </div>

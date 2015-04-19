@@ -8,7 +8,11 @@ class Ability
        can :read, :all
        can :manage, Sender do |sender|
         sender.try(:user) == user
-       end
+      end
+        #Doorhiig nemlee receivert zoriulj
+       can :manage, Receiver do |receiver|
+          receiver.try(:user) == user
+        end
     #   if user.admin?
     #     can :manage, :all
     #   else
@@ -32,5 +36,6 @@ class Ability
     #
     # See the wiki for details:
     # https://github.com/ryanb/cancan/wiki/Defining-Abilities
-  end
+ end
 end
+

@@ -22,6 +22,7 @@ class ReceiversController < ApplicationController
 
   # GET /receivers/1/edit
   def edit
+    authorize! :manage, @receiver
   end
 
   # POST /receivers
