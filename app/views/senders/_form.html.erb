@@ -1,18 +1,19 @@
-<%= simple_form_for(@sender) do |f| %>
+<center><%= simple_form_for(@sender) do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.input :source_address, required: true %>
-    <%= f.input :destination_address, required: true %>
-    <%= f.input :description %>
-    <%= f.input :arrival, required: true %>
-    <%= f.input :phone, required: true %>
-    <%= f.input :mail, required: true %>
-    <%= f.input :fee %>
+    <%= f.input :source_address, required: true, :label => "Хаанаас", placeholder: "Tokyo, Taipei, Ulaanbaatar..." , input_html: {class: "form-zontrol"} %>
+   <%= f.input :destination_address, required: true, :label => "Хаашаа", placeholder: "Google maps дээрхи хаяг байвал оновчтой дүрслэнэ." , input_html: {class: "form-zontrol"}  %>
+    <%= f.input :description, :label => "Дэлгэрэнгүй тайлбар", placeholder: "" , input_html: {class: "form-zontrol"} %>
+    <%= f.input :arrival, required: true ,:label => "Очих өдөр",  input_html: {class: "form-date"} %>
+    <%= f.input :phone, :label => "Утас", placeholder: "99887766 эсвэл +976-11-99887766" , input_html: {class: "form-zontrol"}  %>
+    <%= f.input :mail , :label => "Майл хаяг", placeholder: "" , input_html: {class: "form-zontrol"} %>
+    <%= f.input :fee ,:label => "Хүсэж буй хөлс", placeholder: "1000₮/кг 3$/kg гэх мэт " , input_html: {class: "form-zontrol"} %>
     
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
+    <%= f.button :submit, "Үүсгэх" %>
+  </div><br>
 <% end %>
+</center

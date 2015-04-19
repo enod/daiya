@@ -1,7 +1,8 @@
-<h2 class="text-center"> Хүргэлтийн мэдээлэл засах </h2>
+<center><h2 class="text-center"> Хүргэлтийн мэдээлэл засах </h2>
 <br>
 <%= render 'form' %>
 
 <%= link_to 'Буцах', senders_path %> |
-<%= link_to 'Харах', @sender %> |
+<%= link_to 'Харах', @sender,:method => :get %> |
 <%= link_to 'Устгах', sender_path(@sender), data: { confirm: "Та итгэлтэй байна уу?" }, :method => :delete %> 
+<center>

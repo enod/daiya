@@ -24,7 +24,7 @@
         <td><ul class="list-group">
           
             
-            <%= link_to 'Дэлгэрэнгүй  ', receiver_path(receiver.id) %><span class="badge"><%= receiver.requests.count %></span>
+            <%= link_to 'Дэлгэрэнгүй  ', receiver_path(receiver.id),:method => :get %><span class="badge"><%= receiver.requests.count %></span>
           </li>
         
         </ul></td>

@@ -5,12 +5,12 @@
       <a class="list-group-item" href="#"><i class="fa fa-picture-o fa-fw"></i>&nbsp; Зураг: <%= image_tag @receiver.image.url(:original), class: "img-responsive" %></a>
       <a class="list-group-item" href="#"><i class="fa fa-pencil fa-fw"></i>&nbsp; Тайлбар: <%= @receiver.description %> </a>
       <a class="list-group-item" href="#"><i class="fa fa-home fa-fw"></i>&nbsp; Хаанаас: <%= @receiver.source_address %> </a>
-      <a class="list-group-item" href="#"><i class="fa fa-plane fa-fw"></i>&nbsp; Хаашаа: <%= @receiver.destination_address %></a>
+      <a class="list-group-item" href="#"><i class="fa fa-plane fa-fw"></i>&nbsp; Хаашаа: <%= @receiver.destination_address %><div id="map-canvas2" style="width: 230px; height:230px;" ></div></a>
       <a class="list-group-item" href="#"><i class="fa fa-calendar fa-fw"></i>&nbsp; Хэднээс: <%= @receiver.from %> </a>
       <a class="list-group-item" href="#"><i class="fa fa-calendar fa-fw"></i>&nbsp; Хэдийд: <%= @receiver.to %> </a>
       <a class="list-group-item" href="#"><i class="fa fa-phone fa-fw"></i>&nbsp; Утас: <%= @receiver.phone %> </a>
       <a class="list-group-item" href="#"><i class="fa fa-envelope-o fa-fw"></i>&nbsp; Майл: <%= @receiver.mail %> </a>
-      <a class="list-group-item" href="#"><i class="fa fa-usd fa-fw"></i>&nbsp; Олгох хөлс: <%= @receiver.fee %> <div id="map-canvas2" style="width: 230px; height:230px;" ></div>  </a>
+      <a class="list-group-item" href="#"><i class="fa fa-usd fa-fw"></i>&nbsp; Олгох хөлс: <%= @receiver.fee %>   </a>
       
     </div>
   </div>  

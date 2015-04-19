@@ -22,7 +22,7 @@
         <td><%= sender.arrival %></td>
         <td><%= sender.fee %></td>
         <td>
-          <%= link_to 'Дэлгэрэнгүй', sender_path(sender.id) %> <span class="badge"><%= sender.negotiations.count %></span></td>
+          <%= link_to 'Дэлгэрэнгүй', sender_path(sender.id), :method => :get %> <span class="badge"><%= sender.negotiations.count %></span></td>
           
           
       </tr>
