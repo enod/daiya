@@ -11,7 +11,7 @@ class Receiver < ActiveRecord::Base
 	has_attached_file :image,
 	:style => { :medium => "300x300>", :thumb => "100x100>" },
 	:storage => :s3,
-	:bucket  => ENV['MY_BUCKET_NAME'],
+	:bucket  => ENV['S3_BUCKET_NAME'],
 	:s3_credentials => {
 		:access_key_id => ENV['AWS_ACCESS_KEY_ID'],
 		:secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
@@ -19,7 +19,7 @@ class Receiver < ActiveRecord::Base
 		:s3_permissions => 'private',
 		:url => ":s3_domain_url"
 		validates :image, presence: true
-		validates :description, presence: true
+		validates :description, presence: false
 
 	validates_attachment_content_type :image, 
 	content_type:  /^image\/(png|gif|jpeg)/,
