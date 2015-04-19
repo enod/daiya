@@ -24,7 +24,7 @@
         <td><ul class="list-group">
           
             
-            <%= link_to 'Дэлгэрэнгүй  ', receiver_path(receiver.id) %><span class="badge">1</span>
+            <%= link_to 'Дэлгэрэнгүй  ', receiver_path(receiver.id) %><span class="badge"><%= receiver.requests.count %></span>
           </li>
         
         </ul></td>
@@ -37,6 +37,6 @@
 
 <br>
 <% if current_user %>
-<i class="fa fa-plus fa-lg"><%= link_to 'оруулах', new_receiver_path %></i>
+<i class="fa fa-plus fa-lg"><%= link_to 'нэмэх', new_receiver_path %></i>
 <% end %>
 

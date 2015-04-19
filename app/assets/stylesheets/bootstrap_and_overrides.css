@@ -57,11 +57,11 @@ a.list-group-item.active,[class*='-info'] {
   
 #section1 {
 	background-color: #168ccc;
-    color:#dedeff;
+    color:#ECECEC;
 }
   
 #section2 {
-	background-color: #e5e5ef;
+	background-color: #F4F4F7;
     color:#686868;
 }
   
@@ -81,7 +81,7 @@ a.list-group-item.active,[class*='-info'] {
 
 #section6 {
 	background-color: #168ccc;
-    color:#ddd;
+    color:#EFEFEF;
 }
 
 footer {

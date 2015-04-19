@@ -22,7 +22,7 @@
         <td><%= sender.arrival %></td>
         <td><%= sender.fee %></td>
         <td>
-          <%= link_to 'Дэлгэрэнгүй', sender_path(sender.id) %></td>
+          <%= link_to 'Дэлгэрэнгүй', sender_path(sender.id) %> <span class="badge"><%= sender.negotiations.count %></span></td>
           
           
       </tr>
@@ -32,5 +32,5 @@
 
 <br>
 <% if current_user %>
-<i class="fa fa-plus fa-lg"><%= link_to 'оруулах', new_sender_path %></i>
+<i class="fa fa-plus fa-lg"><%= link_to 'нэмэх', new_sender_path %></i>
 <% end %>

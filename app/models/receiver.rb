@@ -23,7 +23,7 @@ class Receiver < ActiveRecord::Base
 
 	validates_attachment_content_type :image, 
 	content_type:  /^image\/(png|gif|jpeg)/,
-	message: "Зөвхөн зураг оруулах ёстой!"
+	message: "Зөвхөн зураг оруулна уу!"
 	validates :image, attachment_presence: true
 	
 

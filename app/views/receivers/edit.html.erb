@@ -1,7 +1,7 @@
-<h1>Editing Receiver</h1>
-
+<h2 class="text-center"> Хүргүүлэх хүсэлт өөрчлөх </h2>
+<br>
 <%= render 'form' %>
 
 <%= link_to 'Буцах', receivers_path %> | 
 <%= link_to 'Үзэх', @receiver %> | 
-<%= link_to 'Устгах', receiver_path(@receiver), :confirm => 'Are you sure?', :method => :delete %> 
+<%= link_to 'Устгах', receiver_path(@receiver), data: { confirm: "Та итгэлтэй байна уу?" }, :method => :delete %> 
