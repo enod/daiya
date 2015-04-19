@@ -56,10 +56,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
   gem 'paperclip'
 
-
-
-  gem 'aws-sdk', '~> 1.61.0'
-
+  gem 'aws-sdk'
+  
   gem 'friendly_id'
 
 group :development do 
