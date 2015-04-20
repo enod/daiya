@@ -6,6 +6,9 @@
    <%= f.input :destination_address, required: true, :label => "Хаашаа", placeholder: "Google maps дээрхи хаяг байвал оновчтой дүрслэнэ." , input_html: {class: "form-zontrol"}  %>
     <%= f.input :description, :label => "Дэлгэрэнгүй тайлбар", placeholder: "" , input_html: {class: "form-zontrol"} %>
     <%= f.input :arrival, required: true ,:label => "Очих өдөр",  input_html: {class: "form-date"} %>
+    
+
+
     <%= f.input :phone, :label => "Утас", placeholder: "99887766 эсвэл +976-11-99887766" , input_html: {class: "form-zontrol"}  %>
     <%= f.input :mail , :label => "Майл хаяг", placeholder: "" , input_html: {class: "form-zontrol"} %>
     <%= f.input :fee ,:label => "Хүсэж буй хөлс", placeholder: "1000₮/кг 3$/kg гэх мэт " , input_html: {class: "form-zontrol"} %>
@@ -16,4 +19,5 @@
     <%= f.button :submit, "Үүсгэх" %>
   </div><br>
 <% end %>
-</center
+</center>
+

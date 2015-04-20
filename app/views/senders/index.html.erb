@@ -16,7 +16,13 @@
   <tbody>
     <% @senders.each do |sender| %>
       <tr>
-        <td><%= gravatar_tag current_user.email, size: 30 %> <%= sender.user.name %> </td>
+        
+        <% if current_user %>
+        <td> <%= gravatar_tag current_user.email, size: 30 %> <%= sender.user.name %></td>
+        <% else %>
+        <td><%= sender.user.name %></td>
+        <% end %>
+        
         <td><%= sender.source_address %></td>
         <td><%= sender.destination_address %></td>
         <td><%= sender.arrival %></td>
