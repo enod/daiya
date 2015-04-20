@@ -1,7 +1,7 @@
 <%= simple_form_for(@receiver) do |f| %>
   <%= f.error_notification %>
 
-  <center><div class="form-inputs">
+  
     <%= f.input :stuff, required: true, autofocus: true, :label => "Илгээх зүйл", placeholder: "Жишээ : Бичиг баримт, CD, Гар утас...", input_html: {class: "form-zontrol"} %>
     <%= f.input :image,required: false,  :label => "Зураг"%>
     <%= f.input :description, :label => "Дэлгэрэнгүй тайлбар", placeholder: "Жишээ : Иргэний үнэмлэх яаралтай дайж авчруулах хэрэгтэй байна." , input_html: {class: "form-zontrol"} %>
@@ -15,10 +15,10 @@
     
     
   </div>
-
+<center>
   <div class="form-actions">
     <%= f.button :submit, "Дуусгах" %>
   </div>
-<% end %>
+<% end %></center>
 <br>
-<center>
+

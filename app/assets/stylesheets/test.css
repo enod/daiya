@@ -1,0 +1,29 @@
+div.img-div{
+    height:200px;
+    width:200px;
+    overflow:hidden;
+    border-radius:50%;
+}
+
+.img-div img{
+    -webkit-transform:translate(-50%);
+    margin-left:100px;
+}
+
+.circle-image{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    background-image:url("https://s3.amazonaws.com/hurgeltdotorgdevelopment/receivers/images/Screen+Shot+2015-04-21+at+2.28.31+AM.png");
+    display:block;
+    background-position-y:25% 
+}
+
+.circle-image1{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    background-image:url("https://s3.amazonaws.com/hurgeltdotorgdevelopment/receivers/images/Screen+Shot+2015-04-21+at+2.28.19+AM.png");
+    display:block;
+    background-position-y:25% 
+}

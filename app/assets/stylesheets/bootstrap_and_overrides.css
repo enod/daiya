@@ -44,6 +44,24 @@ section {
 .v-center {
     padding-top:10%;
     font-size:70px;
+     font-family: times, Times New Roman, times-roman, georgia, serif;
+  
+  margin: 0;
+  padding: 0px 0px 6px 0px;
+  line-height: 44px;
+  letter-spacing: -2px;
+  font-weight: bold;
+}
+.v-center1 {
+    padding-top:0%;
+    font-size:15px;
+    color:#ECECEC;
+    font-family: "Lucida Grande", Verdana, Helvetica, Arial, sans-serif;
+  line-height: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+
 }
   
 .well {
