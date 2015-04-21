@@ -14,10 +14,11 @@
   </thead>
 
   <tbody>
+    
     <% @receivers.each do |receiver| %>
       <tr>
         <% if current_user %>
-        <td><%= gravatar_tag current_user.email, size: 30 %> <%= receiver.user.name %> </td>
+        <td><%= gravatar_tag receiver.user.email, size: 30 %> <%= receiver.user.name %> </td>
         <% else %>
         <td><%= receiver.user.name %> </td>
         <% end %>

@@ -2,8 +2,9 @@
 	<h2 class="text-center"> Хүргүүлэх хүсэлт өөрчлөх </h2>
 <br>
 <%= render 'form' %>
-
+<center><br>
 <%= link_to 'Буцах', receivers_path %> | 
 <%= link_to 'Үзэх', @receiver,:method => :get %> | 
 <%= link_to 'Устгах', receiver_path(@receiver), data: { confirm: "Та итгэлтэй байна уу?" }, :method => :delete %> 
+<center>
 </center>

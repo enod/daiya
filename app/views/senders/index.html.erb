@@ -18,7 +18,7 @@
       <tr>
         
         <% if current_user %>
-        <td> <%= gravatar_tag current_user.email, size: 30 %> <%= sender.user.name %></td>
+        <td> <%= gravatar_tag sender.user.email, size: 30 %> <%= sender.user.name %></td>
         <% else %>
         <td><%= sender.user.name %></td>
         <% end %>
