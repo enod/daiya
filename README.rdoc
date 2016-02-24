@@ -1,28 +1,16 @@
-== README
+== Daiya - A crowd sourced delivery web application.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Daiya is a crowd sourced delivery web app written in Ruby on rails. Basically it's 2 sided platform which bridges between shipper and traveler.
+Web is live at - {Daiya}[https://calm-escarpment-9649.herokuapp.com]
 
-Things you may want to cover:
+Things you may interest:
 
-* Ruby version
+* Can login with facebook (implemented oauth fb-as a provider)
 
-* System dependencies
+* Can provide location information (Google Maps GEO API)
 
-* Configuration
+* Can save photos (backed by AWS s3)
 
-* Database creation
+* Much more - see gemfile and commits
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Since I created this last year, some gems might be outdated. And since front-end part looks horrible, git pull requests are more welcome than anything!
